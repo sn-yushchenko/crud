@@ -1,0 +1,11 @@
+{
+  "dbConfig": {
+      "host": "localhost",
+      "user": "root",
+      "password": "31052005",
+      "database": "books"
+    },
+  "constants" : {
+    "PORT" : "3030"
+  }
+}
