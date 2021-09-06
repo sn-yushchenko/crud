@@ -45,10 +45,19 @@ function addAuthor(firstName, lastName, email, callback){
     })
 }
 
+function addImageTodb(file_name, path,callback){
+    const query = "INSERT INTO files VALUES(0,'" + file_name + "'" + ','+ "'" + path + "');";
+    getData(query, (data, connection) => {
+        callback(data);
+        connection.end();
+    })
+}
+
 module.exports = {
     getAllBooks: getAllBooks,
     updateItemBook: updateItemBook,
     delBook: delBook,
     addBook: addBook,
-    addAuthor: addAuthor
+    addAuthor: addAuthor,
+    addImageTodb: addImageTodb
 }
